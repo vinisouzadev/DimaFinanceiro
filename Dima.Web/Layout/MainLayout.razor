@@ -1,0 +1,78 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider @ref="_mudThemeProvider" @bind-IsDarkMode="Configuration.IsDarkMode" Theme="Configuration.Theme" />
+<MudSnackbarProvider />
+<MudPopoverProvider/>
+<MudDialogProvider/>
+
+<AuthorizeView>
+    <Authorized>
+        <MudLayout>
+            <MudDrawer @bind-Open="@IsDrawerOpened" Style="opacity: 0.999">
+                <NavMenu />
+            </MudDrawer>
+            
+            <MudAppBar>
+                <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                               Color="Color.Inherit"
+                               OnClick="ToggleDrawer" />
+
+                <MudText Style="color:black" Typo="Typo.h5">Dima</MudText>
+
+                <MudSpacer />
+                
+                <MudButton Variant="Variant.Text" Color="Color.Dark" StartIcon="@Icons.Material.Filled.Add" Href="/lancamentos/nova">NOVA TRANSAÇÃO</MudButton>
+                
+                <MudSpacer/>
+                
+                <MudText Typo="Typo.caption">@context.User.Identity?.Name</MudText>
+
+                <MudSwitch @bind-Value="Configuration.IsDarkMode"
+                           Class="ma-4"
+                           Color="Color.Inherit"
+                           ThumbIcon="@Icons.Material.TwoTone.Bedtime" />
+
+            </MudAppBar>
+            <MudMainContent>
+                <MudContainer Class="mt-4">
+                    @Body
+                </MudContainer>
+            </MudMainContent>
+        </MudLayout>
+    </Authorized>
+
+    <NotAuthorized>
+        <LoginRedirect />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+
+    private bool IsDrawerOpened = true;
+
+    private MudThemeProvider _mudThemeProvider = null!;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Configuration.IsDarkMode = await _mudThemeProvider.GetSystemPreference();
+            await _mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
+            StateHasChanged();
+        }
+    }
+
+    private Task OnSystemPreferenceChanged(bool newValue)
+    {
+        Configuration.IsDarkMode = newValue;
+        StateHasChanged();
+        return Task.CompletedTask;
+
+    }
+
+    private void ToggleDrawer()
+    {
+        IsDrawerOpened = !IsDrawerOpened;
+    }
+}
+

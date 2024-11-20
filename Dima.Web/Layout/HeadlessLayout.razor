@@ -1,0 +1,39 @@
+﻿@inherits LayoutComponentBase
+@using MudBlazor.Utilities
+@using Microsoft.AspNetCore.Components
+
+<MudThemeProvider @ref="_mudThemeProvider" @bind-IsDarkMode="Configuration.IsDarkMode" Theme="Configuration.Theme" />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudMainContent>
+        <div class="d-flex justify-end">
+        </div>
+        <MudContainer>
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private MudThemeProvider _mudThemeProvider = null!;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Configuration.IsDarkMode = await _mudThemeProvider.GetSystemPreference();
+            await _mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
+            StateHasChanged();
+        }
+    }
+
+    private Task OnSystemPreferenceChanged(bool newValue)
+    {
+        Configuration.IsDarkMode = newValue;
+        StateHasChanged();
+        return Task.CompletedTask;
+
+    }
+}
+

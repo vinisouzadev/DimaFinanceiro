@@ -1,0 +1,10 @@
+﻿@inject NavigationManager NavigationManager
+
+<MudText Typo="Typo.h3">Redirecionando para o login...</MudText>
+
+@code {
+    protected override void OnInitialized()
+    {
+        NavigationManager.NavigateTo("/login");
+    }
+}

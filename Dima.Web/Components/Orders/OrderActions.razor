@@ -1,0 +1,30 @@
+﻿@inherits OrderActionsComponent
+
+@switch (Order.Status)
+{
+    case EOrderStatus.Paid:
+        <MudButton 
+            FullWidth="true"
+            Color="Color.Warning"
+            Variant="Variant.Outlined"
+            OnClick="OnRefundButtonClickedAsync"> Solicitar Estorno</MudButton>
+        break;
+
+    case EOrderStatus.WaitingPayment:
+        <MudButton FullWidth="true"
+                   Color="Color.Success"
+                   Variant="Variant.Filled"
+                   Size="Size.Large"
+                   class="mb-4"
+                   OnClick="OnPayButtonClikedAsync"> Pagar com Stripe
+        </MudButton>
+
+        <MudButton FullWidth="true"
+                   Color="Color.Error"
+                   Variant="Variant.Outlined"
+                   OnClick="OnCancelButtonClickedAsync"> Cancelar pedido</MudButton>
+        break;
+
+    default:
+        break;
+}

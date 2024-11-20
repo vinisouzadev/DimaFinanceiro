@@ -1,0 +1,22 @@
+﻿@page "/pedidos/{OrderNumber}/confirmar"
+@inherits ConfirmPaymentPageCode
+
+@if(Order is not null)
+{
+    if(Order.Status == EOrderStatus.Paid)
+    {
+        <MudText Color="Color.Success" Typo="Typo.h3">Pedido pago com sucesso!</MudText>
+        <p>Parabéns! Agora você tem acesso completo ao sistema!</p>
+    }
+    else
+    {
+        <MudText Color="Color.Error" Typo="Typo.h3">Oops, algo deu errado!</MudText>
+        <p>Seu pagamento não pôde ser completado e você receberá um e-mail em breve</p>
+    }
+}
+else
+{
+    <MudSkeleton Animation="Animation.Wave"></MudSkeleton>
+    <MudSkeleton Animation="Animation.Wave"></MudSkeleton>
+    <MudSkeleton Animation="Animation.Wave"></MudSkeleton>
+}

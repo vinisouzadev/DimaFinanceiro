@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dima.Core", "Dima.Core\Dima.Core.csproj", "{6FF79FDE-0910-4DF4-912B-33522974887D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dima.API", "Dima.API\Dima.API.csproj", "{40CA7E2B-6747-4602-95C6-4290583F6688}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dima.Web", "Dima.Web\Dima.Web.csproj", "{1F231398-E1F4-4ED0-9FF4-2AE3DE453FB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dima.APITestes.Tests", "Dima.APITestes.Tests\Dima.APITestes.Tests.csproj", "{8FCFF691-955F-450B-A670-33BC9B693DA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dima.CoreTestes.Tests", "Dima.CoreTestes.Tests\Dima.CoreTestes.Tests.csproj", "{A074B55C-EA4D-4C8A-A2D7-871D7381A842}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{230B2BA6-7D34-46BA-8925-2764F1188085}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FF79FDE-0910-4DF4-912B-33522974887D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF79FDE-0910-4DF4-912B-33522974887D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF79FDE-0910-4DF4-912B-33522974887D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF79FDE-0910-4DF4-912B-33522974887D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CA7E2B-6747-4602-95C6-4290583F6688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CA7E2B-6747-4602-95C6-4290583F6688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CA7E2B-6747-4602-95C6-4290583F6688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CA7E2B-6747-4602-95C6-4290583F6688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F231398-E1F4-4ED0-9FF4-2AE3DE453FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F231398-E1F4-4ED0-9FF4-2AE3DE453FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F231398-E1F4-4ED0-9FF4-2AE3DE453FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F231398-E1F4-4ED0-9FF4-2AE3DE453FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCFF691-955F-450B-A670-33BC9B693DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCFF691-955F-450B-A670-33BC9B693DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCFF691-955F-450B-A670-33BC9B693DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCFF691-955F-450B-A670-33BC9B693DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A074B55C-EA4D-4C8A-A2D7-871D7381A842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A074B55C-EA4D-4C8A-A2D7-871D7381A842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A074B55C-EA4D-4C8A-A2D7-871D7381A842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A074B55C-EA4D-4C8A-A2D7-871D7381A842}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ED5742D-CD18-4B3A-BAC9-6AD7D6BFF65C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,80 @@
+﻿@page "/lancamentos/historico"
+@inherits ListTransactionPageCode
+
+<MudText Typo="Typo.h3" Color="Color.Primary">Transações</MudText>
+
+<div Class="d-flex justify-end mb-5 mt-5">
+    <MudSelect T="int" @bind-Value="CurrentMonth" Label="Mês" AnchorOrigin="Origin.BottomCenter" Class="mr-4">
+        @for(var month = 1; month <= 12; month++)
+        {
+            DateTime date = new(DateTime.UtcNow.Year, month, 1);
+            <MudSelectItem T="int" Value="@month">
+                @(date.ToString("MMMM"))
+            </MudSelectItem>
+        }
+    </MudSelect>
+    <MudSelect T="int" @bind-Value="CurrentYear" Label="Ano" AnchorOrigin="Origin.BottomCenter">
+        @foreach(var year in Years)
+        {
+            <MudSelectItem T="int" Value="@year">
+                @year
+            </MudSelectItem>
+        }
+    </MudSelect>
+    <MudSpacer/>
+    <MudButton Color="Color.Primary" Size="Size.Small" Variant="Variant.Filled" StartIcon="@Icons.Material.TwoTone.Search" OnClick="() => FilterDate()">Pesquisar</MudButton>
+</div>
+
+<MudDataGrid Items="Transactions"
+             Filterable="true"
+             QuickFilter="Search"
+             ColumnResizeMode="ResizeMode.Column"
+             Elevation="6"
+             Class="mb-7">
+    
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Transações</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="SearchText"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      Placeholder="Filtrar"
+                      Immediate="true"
+                      IconSize="Size.Medium"
+	                      Class="mt-0" />
+    </ToolBarContent>
+    <Columns>
+        <PropertyColumn Property="x => x.Id" Title="#" />
+
+        <PropertyColumn Property="x => x.Title" Title="Título" />
+
+        <TemplateColumn Title="Tipo" Filterable="true">
+            <CellTemplate>
+                @if (context.Item.Type == ETransactionType.Deposit)
+                {
+                    <MudChip Color="Color.Success" Size="Size.Small" Variant="Variant.Filled">entrada</MudChip>
+                }
+                else
+                {
+                    <MudChip Color="Color.Error" Size="Size.Small" Variant="Variant.Filled">saída</MudChip>
+                }
+            </CellTemplate>
+        </TemplateColumn>
+
+        <PropertyColumn Property="x => x.Amount" Title="Amount" Sortable="true" Format="C">
+            <FooterTemplate>
+                @context.Items.Sum(x => x.Amount).ToString("C")
+            </FooterTemplate>
+        </PropertyColumn>
+
+        <TemplateColumn CellClass="d-flex justify-end">
+            <CellTemplate>
+                <MudStack Row>
+                    <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Primary" Href="@($"/lancamentos/editar/{context.Item.Id}")" />
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" OnClick="() => OnDeleteButtonClickedAsync(context.Item.Id)" />
+                </MudStack>
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+
+</MudDataGrid>

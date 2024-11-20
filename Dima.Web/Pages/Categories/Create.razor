@@ -1,0 +1,42 @@
+﻿@page "/categorias/criar"
+@inherits CreateCategoryPageCode
+
+<PageTitle>Categoria - Criar</PageTitle>
+
+<MudText 
+    Typo="Typo.h3"
+    Class="d-flex justify-center mt-4 mb-4"
+    Color="Color.Primary">Criar categoria</MudText>
+
+<MudPaper class="pa-8" mt-4 Elevation="6">
+    <EditForm Model="InputModel" OnValidSubmit="OnValidSubmitAsync">
+        <DataAnnotationsValidator />
+
+        <MudTextField T="string"
+                      Label="Título"
+                      For="@(() => InputModel.Title)"
+                      @bind-Value="InputModel.Title" />
+
+        <MudTextField T="string"
+                      Lines="5"
+                      Label="Descrição"
+                      For="@(() => InputModel.Description)"
+                      @bind-Value="InputModel.Description"
+                      Class="mt-4"/>
+
+        <div class="d-flex mt-8">
+            @if (IsBusy)
+            {   
+                <MudButton Variant="Variant.Text" Disabled="true" Color="Color.Primary">Voltar</MudButton>
+                <MudSpacer/>
+                <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+            }
+            else
+            {
+                <MudButton Variant="Variant.Text" Color="Color.Primary" Href="/categorias">Voltar</MudButton>
+                <MudSpacer/>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Salvar</MudButton>
+            }
+        </div>
+    </EditForm>
+</MudPaper>

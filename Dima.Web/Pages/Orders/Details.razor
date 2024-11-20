@@ -1,0 +1,49 @@
+﻿@page "/pedidos/{code}"
+@inherits DetailsPageCode
+
+@if(Order is not null)
+{
+    <div class="mb-10">
+        <h1>Detalhes do pedido</h1>
+        <br />
+        <h4>Número do pedido</h4>
+        <p>@Order.OrderCode</p>
+        <br />
+        <h4>Data do pedido</h4>
+        <p>@Order.CreatedAt.ToString("dd/MM/yyyy")</p>
+        <br />
+        <h4>Última atualização</h4>
+        <p>@Order.UpdatedAt.ToString("dd/MM/yyyy")</p>
+        <br />
+        <h4>Produto</h4>
+        <p>@Order.Product.Title</p>
+        <br />
+        <h4>Valor do Produto</h4>
+        <p>@Order.Product.Price.ToString("C")</p>
+        <br />
+        <h4>Desconto</h4>
+        <p>@(Order.Voucher is null ? "Não aplicado" : Order.Voucher.Amount.ToString("C"))</p>
+        <br />
+        <h4>Valor total</h4>
+        <p>@Order.Total.ToString("C")</p>
+        <br />
+        <h4>Situação</h4>
+        <OrderStatus Status="@Order.Status"></OrderStatus>
+        <br />
+        <br />
+        <br />
+        <CascadingValue Value="this">
+            <OrderActions Order="Order" />
+        </CascadingValue>
+        
+    </div>
+    
+}
+else
+{
+    <MudSkeleton Animation="Animation.Wave" />
+    <MudSkeleton Animation="Animation.Wave" />
+    <MudSkeleton Animation="Animation.Wave" />
+}
+
+

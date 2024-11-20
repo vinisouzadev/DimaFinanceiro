@@ -1,0 +1,66 @@
+﻿@page "/lancamentos/nova"
+@using Dima.Core.Enums
+@inherits CreateTransactionPageCode
+
+<MudText Typo="Typo.h3" Color="Color.Primary" Class="d-flex justify-center">Nova transação</MudText>
+<MudPaper Class="mt-4 mb-6 pa-8">
+    <EditForm Model="InputModel" OnValidSubmit="OnValidSubmitAsync">
+        <DataAnnotationsValidator/>
+
+        <MudTextField T="String"
+                      For="@(() => InputModel.Title)"
+                      @bind-Value="InputModel.Title"
+                      Label="Título"
+                      HelperText="Título obrigatório"
+                      Class="mt-3"/>
+
+        <MudTextField T="decimal"
+                      For="() => InputModel.Amount"
+                      @bind-Value="InputModel.Amount"
+                      Format="C"
+                      Label="Valor"
+                      HelperText="Informe o valor da transação"
+                      Class="mt-5" />
+
+        <MudDatePicker @bind-Date="@InputModel.PaidOrReceivedAt"
+                       Label="Data da transação"
+                       HelperText="Informe a data de recebimento ou pagamento da transação"
+                       PickerVariant="PickerVariant.Dialog" Rounded="true" />
+
+        <MudSelect T="ETransactionType"
+                   Label="Tipo de transação"
+                   @bind-Value="InputModel.Type"
+                   AnchorOrigin="Origin.BottomCenter"
+                   Class="mt-5">
+            <MudSelectItem T="ETransactionType" Value="ETransactionType.Deposit">Entrada</MudSelectItem>
+            <MudSelectItem T="ETransactionType" Value="ETransactionType.Withdraw">Saída</MudSelectItem>
+        </MudSelect>
+
+        <MudSelect T="long"
+                   Label="Categoria"
+                   @bind-Value="InputModel.CategoryId"
+                   AnchorOrigin="Origin.BottomCenter"
+                   Class="mt-5">
+            @foreach (var category in Categories)
+            {
+                <MudSelectItem T="long" Value="@category.Id">@category.Title</MudSelectItem>
+            }
+        </MudSelect>
+
+        <div class="d-flex mt-7">
+            @if (IsBusy)
+            {
+                <MudButton Color="Color.Primary" Variant="Variant.Text" Disabled="true" Href="/lancamentos/historico">Voltar</MudButton>
+                <MudSpacer/>
+                <MudProgressCircular Color="Color.Primary"/>
+            }
+            else
+            {
+                <MudButton Color="Color.Primary" Variant="Variant.Text" Href="/lancamentos/historico">Voltar</MudButton>
+                <MudSpacer/>
+                <MudButton Color="Color.Primary" ButtonType="ButtonType.Submit" Variant="Variant.Filled">Salvar</MudButton>
+            }
+        </div>
+
+    </EditForm>  
+</MudPaper>
