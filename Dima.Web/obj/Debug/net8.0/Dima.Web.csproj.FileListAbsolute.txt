@@ -1076,3 +1076,4 @@ C:\Estagio\.NET\DimaFinanceiro\Dima.Web\obj\Debug\net8.0\Dima.Web.dll
 C:\Estagio\.NET\DimaFinanceiro\Dima.Web\obj\Debug\net8.0\refint\Dima.Web.dll
 C:\Estagio\.NET\DimaFinanceiro\Dima.Web\obj\Debug\net8.0\Dima.Web.pdb
 C:\Estagio\.NET\DimaFinanceiro\Dima.Web\obj\Debug\net8.0\ref\Dima.Web.dll
+C:\Estagio\.NET\DimaFinanceiro\Dima.Web\obj\Debug\net8.0\Dima.Web.sourcelink.json

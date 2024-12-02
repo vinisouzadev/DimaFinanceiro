@@ -168,3 +168,4 @@ C:\Estagio\.NET\DimaFinanceiro\Dima.CoreTestes.Tests\obj\Debug\net8.0\refint\Dim
 C:\Estagio\.NET\DimaFinanceiro\Dima.CoreTestes.Tests\obj\Debug\net8.0\Dima.CoreTestes.Tests.pdb
 C:\Estagio\.NET\DimaFinanceiro\Dima.CoreTestes.Tests\obj\Debug\net8.0\Dima.CoreTestes.Tests.genruntimeconfig.cache
 C:\Estagio\.NET\DimaFinanceiro\Dima.CoreTestes.Tests\obj\Debug\net8.0\ref\Dima.CoreTestes.Tests.dll
+C:\Estagio\.NET\DimaFinanceiro\Dima.CoreTestes.Tests\obj\Debug\net8.0\Dima.CoreTestes.Tests.sourcelink.json

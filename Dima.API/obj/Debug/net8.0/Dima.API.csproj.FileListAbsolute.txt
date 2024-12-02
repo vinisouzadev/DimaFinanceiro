@@ -115,3 +115,4 @@ C:\Estagio\.NET\DimaFinanceiro\Dima.API\obj\Debug\net8.0\refint\Dima.API.dll
 C:\Estagio\.NET\DimaFinanceiro\Dima.API\obj\Debug\net8.0\Dima.API.pdb
 C:\Estagio\.NET\DimaFinanceiro\Dima.API\obj\Debug\net8.0\Dima.API.genruntimeconfig.cache
 C:\Estagio\.NET\DimaFinanceiro\Dima.API\obj\Debug\net8.0\ref\Dima.API.dll
+C:\Estagio\.NET\DimaFinanceiro\Dima.API\obj\Debug\net8.0\Dima.API.sourcelink.json

@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Dima.Core.Enums;
 using Dima.Core.Requests.Stripe;
 using Dima.Core.Models.Orders;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Dima.API.Handlers
 {

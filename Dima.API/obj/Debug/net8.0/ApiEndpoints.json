@@ -547,7 +547,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.PagedResponse\u00601[[System.Collections.Generic.List\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Dima.Core.Responses.PagedResponse\u00601[[System.Collections.Generic.List\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -577,7 +577,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -607,7 +607,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -637,7 +637,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -667,7 +667,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -697,7 +697,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -759,7 +759,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.PagedResponse\u00601[[System.Collections.Generic.List\u00601[[Dima.Core.Models.Order.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Dima.Core.Responses.PagedResponse\u00601[[System.Collections.Generic.List\u00601[[Dima.Core.Models.Orders.Order, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -789,7 +789,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Product, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Product, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -1066,7 +1066,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Order.Voucher, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Dima.Core.Responses.Response\u00601[[Dima.Core.Models.Orders.Voucher, Dima.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],

@@ -9,3 +9,4 @@ C:\Estagio\.NET\DimaFinanceiro\Dima.Core\obj\Debug\net8.0\Dima.Core.dll
 C:\Estagio\.NET\DimaFinanceiro\Dima.Core\obj\Debug\net8.0\refint\Dima.Core.dll
 C:\Estagio\.NET\DimaFinanceiro\Dima.Core\obj\Debug\net8.0\Dima.Core.pdb
 C:\Estagio\.NET\DimaFinanceiro\Dima.Core\obj\Debug\net8.0\ref\Dima.Core.dll
+C:\Estagio\.NET\DimaFinanceiro\Dima.Core\obj\Debug\net8.0\Dima.Core.sourcelink.json

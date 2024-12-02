@@ -1,30 +1,27 @@
 using Dima.API.Common;
 using Dima.API.Endpoints;
 
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
 
-        builder
-            .AddConfiguration()
-            .AddSecurity()
-            .AddDataContexts()
-            .AddCors()
-            .AddSwagger()
-            .AddDependencyInjection();
+var builder = WebApplication.CreateBuilder(args);
 
-        var app = builder.Build();
+builder
+    .AddConfiguration()
+    .AddSecurity()
+    .AddDataContexts()
+    .AddCors()
+    .AddSwagger()
+    .AddDependencyInjection();
 
-        app.ConfigureDevEnvironment();
+var app = builder.Build();
 
-        app.UseCors(ApiConfiguration.CorsPolicyName);
+app.ConfigureDevEnvironment();
 
-        app.UseSecurity();
+app.UseCors(ApiConfiguration.CorsPolicyName);
 
-        app.MapEndpoints();
+app.UseSecurity();
 
-        app.Run();
-    }
-}
+app.MapEndpoints();
+
+app.Run();
+
+public partial class Program() { }

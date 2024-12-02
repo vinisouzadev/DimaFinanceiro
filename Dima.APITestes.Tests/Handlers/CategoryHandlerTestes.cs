@@ -5,6 +5,8 @@ using Dima.Core.Models;
 using Dima.Core.Requests.Categories;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Polly.Telemetry;
+using System.Formats.Asn1;
 
 namespace Dima.APITestes.Tests.Handlers
 {
@@ -74,19 +76,16 @@ namespace Dima.APITestes.Tests.Handlers
         }
 
         [Fact]
-        public async Task CreateAsync_DadoRequestComPropriedadesNulas_EntaoDeveRetornarUmaRespostaDeFalha()
+        public async Task CreateAsync_DadoRequestComPropriedadesVaziasOuNulas_EntaoDeveRetornarRespostaDeFalha()
         {
-            CreateCategoryRequest request = new();
-            request.Title = null;
-            request.Description = null;
-            request.UserId = null;
-
+            CreateCategoryRequest request = new() 
+            {
+                UserId = _faker.Person.FirstName
+            };
             var result = await _categoryHandler.CreateAsync(request);
-
+            result.Should().NotBeNull();
             result.IsSuccess.Should().BeFalse();
-            result.Data.Should().BeNull();
-            result.Message.Should().Be("Não foi possível criar a sua categoria");
-
+            result.Message.Should().Be("Título está nulo");
         }
 
         #endregion

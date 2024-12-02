@@ -26,5 +26,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Dima.Core\Dima.Core.csproj" />
   </ItemGroup>
+  <ItemGroup> <InternalsVisibleTo Include="Dima.API.IntegrationTests" /> </ItemGroup>
 
 </Project>

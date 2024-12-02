@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Dima.Web",
   "resources": {
-    "hash": "sha256-6J0DVPQLybQMubKquT3L35s1PRW7inHbfoE9hwzNCjE=",
+    "hash": "sha256-kH8v8Nj1o4nJnv1nJsA7HbSbsvECxpwQav1flnjk23Q=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.d2sa64taf3.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -215,12 +215,12 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "Dima.Core.wasm": "sha256-AZhEq3P2y6r+dO7AVIYAfFgxRrDvv4Gd94t1gVkq41M=",
-      "Dima.Web.wasm": "sha256-JppuhL/PQH1cyME1l0OSh7DfxZfFNLPmq9IDTaMLHZ8="
+      "Dima.Core.wasm": "sha256-7JY5wMoVL51XBtcuMWPQvMXC23Uph4MaZ26250iLhZQ=",
+      "Dima.Web.wasm": "sha256-wKHyhtIQc7p8cnfZ+z3gZttgp5Wru3VbeMLqOBAjitE="
     },
     "pdb": {
-      "Dima.Core.pdb": "sha256-au6aiEdTqpRgYQouC2vI5CCwzOem1PDINL5MtLrBt8Q=",
-      "Dima.Web.pdb": "sha256-em8hS6UqGn9RI5+EBhuzhY2UrnSxNeRV28772ZrOGsc="
+      "Dima.Core.pdb": "sha256-byIIXBhGashI0D144SXGS/PnrltldGRhbHMZ8qNuaNo=",
+      "Dima.Web.pdb": "sha256-JuNmz8YZIHHB3iMp+GaM5ssMMNmvIch63nOX+oFNmJ4="
     }
   },
   "cacheBootResources": true,

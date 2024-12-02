@@ -3,7 +3,6 @@ using Dima.Core.Models;
 using Dima.Core.Requests.Categories;
 using Dima.Core.Responses;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace Dima.API.Handlers
 {
@@ -19,7 +18,10 @@ namespace Dima.API.Handlers
         public async Task<Response<Category?>> CreateAsync(CreateCategoryRequest request)
         {  
             try
-            {
+            {    
+                if(String.IsNullOrEmpty(request.Title))
+                    return new Response<Category?>(null, 400, "Título está nulo");
+
                  var category = new Category
                 {
                     UserId = request.UserId,

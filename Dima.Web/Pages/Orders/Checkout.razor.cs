@@ -8,7 +8,7 @@ namespace Dima.Web.Pages.Orders
 {
     public partial class CheckoutPageCode : ComponentBase
     {
-        #region Paranetros
+        #region Parametros
 
         [Parameter]
         public string ProductSlug { get; set; } = string.Empty;
